@@ -1429,8 +1429,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       <div class="metric-label">신규 컷 제작 기간<br>레퍼런스 템플릿화로 팀 제작 방식으로 정착</div>
     </div>
     <div class="metric-item">
-      <div class="metric-num">100편+</div>
-      <div class="metric-label">두 채널 합산 주 4편, 8개월간 기획·제작<br>제작·아트·모델링팀과 매주 일정 조율</div>
+      <div class="metric-num">+51만</div>
+      <div class="metric-label">썸네일 개선으로 늘어난 추가 클릭 (노출 기준 환산)<br>CTR 5.7% → 6.0%, 같은 기간 구독자 +12%</div>
     </div>
   </div>
 </div>
@@ -2421,7 +2421,7 @@ if (ctaSection) {
 }
 
 /* ── 지표 카운트업 (보이면 실행, 완전히 사라지면 리셋) ── */
-const metricTargets = ['274만', '3주 → 4일', '100편+'];
+const metricTargets = ['274만', '3주 → 4일', '+51만'];
 const metricItems = document.querySelectorAll('.metric-item');
 let metricsAnimated = false;
 let metricRafIds = [];
@@ -2446,7 +2446,7 @@ function animateMetrics() {
       const eased = 1 - Math.pow(1 - t, 3);
       if (index === 0) el.textContent = `${Math.round(274 * eased)}만`;
       if (index === 1) el.textContent = `3주 → ${Math.round(21 - 17 * eased)}일`;
-      if (index === 2) el.textContent = `${Math.round(100 * eased)}편+`;
+      if (index === 2) el.textContent = `+${Math.round(51 * eased)}만`;
       if (t < 1) metricRafIds.push(requestAnimationFrame(draw)); else el.textContent = target;
     };
     metricRafIds.push(requestAnimationFrame(draw));
